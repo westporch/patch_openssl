@@ -2,8 +2,8 @@
 # Hyun-gwan Seo(westporch@debianusers.or.kr)
 
 SRC_DIR="/usr/local/src"
-LATEST_OPENSSL_FNAME="openssl-1.1.1p.tar.gz"  # 최신 OpenSSL 소스 파일(참고: https://www.openssl.org/source)
-LATEST_OPENSSL_DNAME="${LATEST_OPENSSL_FNAME:0:14}" # LATEST_OPENSSL_FNAME을 압축 해제한 후의 디렉터리 이름(예를 들어 openssl-1.1.1p)
+LATEST_OPENSSL_FNAME="openssl-1.1.1t.tar.gz"  # 최신 OpenSSL 소스 파일(참고: https://www.openssl.org/source)
+LATEST_OPENSSL_DNAME="${LATEST_OPENSSL_FNAME:0:14}" # LATEST_OPENSSL_FNAME을 압축 해제한 후의 디렉터리 이름(예를 들어 openssl-1.1.1t)
 
 
 # OpenSSL을 소스컴파일 하는 데 필요한 패키지(gcc, make, perl) 설치 확인
