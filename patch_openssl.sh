@@ -26,7 +26,7 @@ function check_pkg_dependency()
 }
 
 
-function prepare_compliation()
+function prepare_compilation()
 {
   # SRC_DIR이 존재하지 않으면, SRC_DIR 디렉터리 생성
   if ! [ -d $SRC_DIR ]; then
@@ -42,7 +42,7 @@ function prepare_compliation()
 
 
 # OpenSSL 소스 컴파일
-function compile_openssh()
+function compile_openssl()
 {
   lib_list=("libssl.so.1.1" "libcrypto.so.1.1")
   
