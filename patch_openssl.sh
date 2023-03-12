@@ -48,7 +48,8 @@ function compile_openssl()
   
   tar xvf $SRC_DIR/$LATEST_OPENSSL_FNAME -C $SRC_DIR
   
-  $SRC_DIR/$LATEST_OPENSSL_DNAME/./config --openssldir=/usr/local/ssl
+  cd $SRC_DIR/$LATEST_OPENSSL_DNAME
+  ./config --openssldir=/usr/local/ssl
   make && make install
   
   ln -sf /usr/local/bin/openssl /usr/bin/openssl
