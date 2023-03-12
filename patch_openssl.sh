@@ -35,7 +35,7 @@ function prepare_compilation()
 
   # LATEST_OPENSSL_FNAME이 존재하지 않으면, 프로그램(patch_openssl.sh) 종료
   if ! [ -f $SRC_DIR/$LATEST_OPENSSL_FNAME ]; then
-    echo "$LATEST_OPENSSL_FNAME does not exits."
+    echo "$LATEST_OPENSSL_FNAME does not exits in $SRC_DIR."
     exit 1
   fi
 }
