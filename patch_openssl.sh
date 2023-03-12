@@ -9,20 +9,15 @@ LATEST_OPENSSL_DNAME="${LATEST_OPENSSL_FNAME:0:14}" # LATEST_OPENSSL_FNAME을 �
 # OpenSSL을 소스컴파일 하는 데 필요한 패키지(gcc, make, perl) 설치 확인
 function check_pkg_dependency()
 {
-  if ! [ -x "$(command -v gcc)" ]; then
-    echo "Gcc is not installed."
-    exit 1
-  fi
-  
-  if ! [ -x "$(command -v make)" ]; then
-    echo "Make is not installed."
-    exit 1
-  fi
-  
-  if ! [ -x "$(command -v perl)" ]; then
-    echo "Perl is not installed."
-    exit 1
-  fi 
+    pkg_list=("gcc" "make" "perl")
+
+    for ((idx=0; idx < ${#pkg_list[@]}; idx++))
+    do
+        if ! [ -x "$(command -v ${pkg_list[$idx]})" ]; then
+            echo "${pkg_list[$idx]} is not installed."
+            exit 1
+        fi
+    done
 }
 
 
